@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://schema.opencerta.org/fhir/202009"
+  ],
+  "type": ["VerifiableCredential", "FHIRCredential"],
+
+  "id": "urn:certa:3d977353-d3ff-414a-9e41-90fa2e402301",
+  "issuer": "https://issuers.magnacerta.com/9e53493a-1a34-4ad4-97b9-47adf47401b2/e71b6476-7e0f-4612-a097-bf6f3dd9129c",
+
+  "issuanceDate": "2010-01-01T19:23:24Z",
+  "expirationDate": "2020-01-01T19:23:24Z",
+
+  "credentialSubject": {
+    "type": "FHIRCredential",
+    "id": "urn:fhir:21836391490.2020.LCLS.32047215.2020-08-05.164055",
+
+    "givenName": "Dola",
+    "additionalName": "Mayie",
+    "familyName": "Plunkett",
+    "gender": "Female",
+    "honorificPrefix": "Mrs.",
+    "honorificSuffix": "PhD",
+    "photograph": "https://schema.org/contentUrl",
+
+    "fhirVersion": "3.5a.0",
+    "fhirSource": {
+      "id": "21836391490.2020.LCLS.32047215.2020-08-05.164055",
+      "category": {
+        "coding": [{
+          "system": "http://hl7.org/fhir/v2/0074",
+          "code": "LAB"
+        }]
+      },
+      "subject": {
+        "reference": "Patient/2694832"
+      },
+      "effectiveDateTime": "2020-08-05T16:36:00+00:00",
+      "resourceType": "DiagnosticReport",
+      "contained": [{
+        "id": "1",
+        "category": {
+          "coding": [{
+            "system": "http://hl7.org/fhir/observation-category",
+            "code": "laboratory"
+          }]
+        },
+        "subject": {
+          "reference": "Patient/2694832"
+        },
+        "effectiveDateTime": "2020-08-05T16:36:00+00:00",
+        "comments": "This sample does not contain detectable SARS-CoV-2 IgG antibodies.\nThis negative result does not rule out SARS-CoV-2 infection.\nCorrelation with epidemiologic risk factors and other clinical and\nlaboratory findings is recommended. Serologic results should not be\nused as the sole basis to diagnose or exclude recent SARS-CoV-2\ninfection.\nThis assay was performed using the Abbott SARS-CoV-2 IgG assay.",
+        "resourceType": "Observation",
+        "code": {
+          "coding": [{
+              "system": "http://labcorp.com/ers/testCodes",
+              "display": "SARS-CoV-2 Antibody, IgG",
+              "code": "164057"
+            },
+            {
+              "system": "http://loinc.org",
+              "display": "SARS-CoV-2 Antibody, IgG",
+              "code": "94563-4"
+            }
+          ]
+        },
+        "interpretation": {
+          "coding": [{
+            "system": "http://hl7.org/fhir/v2/0078",
+            "code": "N"
+          }]
+        },
+        "referenceRange": [{
+          "text": "Negative "
+        }],
+        "meta": {
+          "profile": [
+            "http://fhir.org/guides/argonaut/StructureDefinition/argo-observationresults"
+          ]
+        },
+        "valueString": "Negative",
+        "status": "final",
+        "issued": "2020-08-06T16:08:00.000+00:00"
+      }],
+      "identifier": [{
+        "id": "21836391490.2020.LCLS.32047215.2020-08-05.164055",
+        "system": "http://labcorp.com/ers/diagnosticReport"
+      }],
+      "code": {
+        "text": "SARS-CoV-2 Antibody, IgG",
+        "coding": [{
+          "system": "http://labcorp.com/ers/testCodes",
+          "display": "SARS-CoV-2 Antibody, IgG",
+          "code": "164055"
+        }]
+      },
+      "performer": {
+        "display": "Organization/Labcorp"
+      },
+      "meta": {
+        "profile": [
+          "http://fhir.org/guides/argonaut/StructureDefinition/argo-diagnosticreport"
+        ],
+        "lastUpdated": "2020-08-06T16:09:08.000+00:00"
+      },
+      "result": [{
+        "reference": "#1"
+      }],
+      "status": "final",
+      "issued": "2020-08-06T16:08:00.000+00:00"
+    }
+  },
+  "proof": {}
+}
